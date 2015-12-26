@@ -18,8 +18,9 @@ public class Main_menu : MonoBehaviour {
         Debug.Log("change scene");
     }
 
-    public void ChangePanel(GameObject Objekt )
+    public void ChangePanel(GameObject Objekt)
     {
+        bool Active_Inactive = Objekt.activeSelf;
         Objekt.SetActive(true);
     }
 }
