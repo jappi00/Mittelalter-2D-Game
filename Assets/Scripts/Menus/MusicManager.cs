@@ -6,8 +6,8 @@ public class MusicManager : MonoBehaviour {
 
     //Referenzen
     public Slider slider;//Musik Slider
-    public Toggle toggle;
-    public int setToValue;
+    public Toggle toggle;//Musik on/of toggle
+    public int setToValue;//Bei anmachen der Musik Zielwert
 
     public void OnOfMusic(bool ToogleInput)
     {
@@ -19,7 +19,6 @@ public class MusicManager : MonoBehaviour {
         {
             slider.value = 0;
         }
-        Debug.Log(slider.value);
     }
    
     public void SliderInput(float Value)
