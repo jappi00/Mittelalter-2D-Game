@@ -13,4 +13,14 @@ public class Main_menu : MonoBehaviour {
         Application.LoadLevel(sceneChangeTo);
         Debug.Log("change scene");
     }
+    public void menuChangeTo(GameObject objektToChange){
+        if (objektToChange.activeSelf)
+        {
+            objektToChange.active = false;
+        }
+        else
+        {
+            objektToChange.active = true;
+        }
+    }
 }
