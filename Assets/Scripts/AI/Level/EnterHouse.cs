@@ -6,6 +6,7 @@ public class EnterHouse : MonoBehaviour {
 
     //Referenzen
     private Transform player;
+    private GameObject enterText;
 
     //Strings
     public string levelToLoad;
@@ -16,12 +17,12 @@ public class EnterHouse : MonoBehaviour {
     //Vektors
     public Vector2 textPosition;
 
-    public GUIStyle textStyle;
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-       
+        enterText = GameObject.FindGameObjectWithTag("ShowEnterText");
+
+        enterText.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -37,23 +38,19 @@ public class EnterHouse : MonoBehaviour {
         showText = false;
     }
 
-    void OnGUI() 
-    {
-        if(showText)
-        {
-            GUI.color = Color.black;
-            GUI.Label(new Rect(textPosition.x, textPosition.y, 300, 300), "E to Enter!", textStyle);
-        }
-    }
-
     void Update()
     {
         if(showText)
         {
+            enterText.SetActive(true);
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Application.LoadLevel(levelToLoad);
             }
+        }else
+        {
+            enterText.SetActive(false);
         }
     }
 }

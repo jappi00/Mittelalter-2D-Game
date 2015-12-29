@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ShowEnterText
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Level
+    uniqueID: 4025110027
+    locked: 0
+  - name: Floor
+    uniqueID: 3609514647
+    locked: 0
+  - name: UI
+    uniqueID: 242040349
+    locked: 0
+  - name: Player
+    uniqueID: 247712001
     locked: 0
