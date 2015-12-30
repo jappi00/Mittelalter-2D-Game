@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class Heal : MonoBehaviour {
 
-    private Transform player;
-
     private float currentHealth;
 
     public Slider healthbar; //Lebens anzeige
