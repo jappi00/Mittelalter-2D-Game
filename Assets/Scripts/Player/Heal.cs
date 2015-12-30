@@ -11,10 +11,6 @@ public class Heal : MonoBehaviour {
     public Slider healthbar; //Lebens anzeige
     public float heal;
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-    }
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
