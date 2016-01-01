@@ -6,7 +6,8 @@ public class Damage : MonoBehaviour {
 
     public Slider healthbar; //Lebens anzeige
     public float damage; //Um wieviele Punkte reduziert wird
-    public GameObject DeadPanel; //Panel das angezeigt werden soll wenn man stirbt
+    public GameObject deadPanel; //Panel das angezeigt werden soll wenn man stirbt
+    public GameObject player;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -15,7 +16,8 @@ public class Damage : MonoBehaviour {
 
         if (healthbar.value == 0)
         {
-                DeadPanel.SetActive(true);
+                deadPanel.SetActive(true);
+                player.GetComponent<Player>().enabled = false;
         } 
     }
 }
