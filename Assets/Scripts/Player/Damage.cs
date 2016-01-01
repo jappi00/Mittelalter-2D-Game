@@ -4,24 +4,18 @@ using UnityEngine.UI;
 
 public class Damage : MonoBehaviour {
 
-    private float currentHealth;
-
     public Slider healthbar; //Lebens anzeige
-    public float damage;
+    public float damage; //Um wieviele Punkte reduziert wird
+    public GameObject DeadPanel; //Panel das angezeigt werden soll wenn man stirbt
 
-    // Update is called once per frame
     void OnTriggerEnter2D(Collider2D col)
     {
-        currentHealth = healthbar.value - damage;
-        healthbar.value = currentHealth;
-        if (currentHealth == 0)
+
+        healthbar.value = healthbar.value - damage;
+
+        if (healthbar.value == 0)
         {
-            Application.LoadLevel(0);
+                DeadPanel.SetActive(true);
         } 
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-
     }
 }

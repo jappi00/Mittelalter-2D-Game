@@ -4,19 +4,13 @@ using UnityEngine.UI;
 
 public class Heal : MonoBehaviour {
 
-    private float currentHealth;
-
     public Slider healthbar; //Lebens anzeige
-    public float heal;
+    public float heal; //Um wieviele Punkte geheilt wird
 
-    // Update is called once per frame
-    void OnTriggerEnter2D(Collider2D col)
+    
+    void OnTriggerEnter2D(Collider2D col) //wenn der Spieler im Bereich des Schadens ist
     {
-        currentHealth = healthbar.value + heal;
-        healthbar.value = currentHealth;
-        if (currentHealth == 0)
-        {
-            Application.LoadLevel(0);
-        }
+        healthbar.value = healthbar.value + heal; //Das momentane Leben ist der Wert der Healthbar | Healtbar + Den Wert beim heilen = Healthbar
+        Debug.Log(healthbar.value); // Das momentane Leben wird in der Konsole ausgegeben
     }
 }
