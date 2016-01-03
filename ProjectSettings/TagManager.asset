@@ -4,10 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Deadscreen
   - New Tag
   - ShowEnterText
   - Ground
+=======
+  - ShowEnterText
+>>>>>>> parent of 4af0e64... fix Damage.cs
   layers:
   - Default
   - TransparentFX
