@@ -19,9 +19,6 @@ public class Player : MonoBehaviour {
     {
         //Verbinde Referenzen
         rb2d = GetComponent<Rigidbody2D>();
-
-        //Setzt Booleans
-        grounded = true;
     }
 
     void FixedUpdate()
