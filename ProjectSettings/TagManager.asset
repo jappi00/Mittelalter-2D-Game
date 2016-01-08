@@ -5,10 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - Deadscreen
   - New Tag
   - ShowEnterText
   - Ground
+=======
+  - ShowEnterText
+>>>>>>> parent of 4af0e64... fix Damage.cs
 =======
   - ShowEnterText
 >>>>>>> parent of 4af0e64... fix Damage.cs
